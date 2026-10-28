@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小照同學的研究迴路島</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <p class="kicker">研究迴路島</p>
+  <h1 id="title"></h1>
+  <p id="question" class="question"></p>
+  <p class="hint">拖曳旋轉、滾輪或雙指縮放、點小島看章節；橘色小人是島民，點一下聽提醒。<a href="#text">看文字版</a></p>
+</header>
+
+<main>
+  <section class="stage" aria-label="3D 島嶼">
+    <div id="scene"></div>
+    <div id="labels" aria-hidden="true"></div>
+    <div id="panel" class="panel" role="dialog" aria-modal="false" aria-labelledby="panel-title" hidden>
+      <button type="button" id="panel-close" class="close" aria-label="關閉">×</button>
+      <div id="panel-body"></div>
+    </div>
+    <p id="nogl" class="nogl" hidden>這台裝置無法顯示 3D，請看下方文字版。</p>
+  </section>
+
+  <section id="text" class="textver" aria-label="文字版">
+    <h2>文字版</h2>
+    <p class="loopnote">六章依序相連；第六章的「交給下一輪」經回饋橋回到第一章。</p>
+    <div id="chapters"></div>
+  </section>
+</main>
+
+<footer class="foot">由造島包生成；內容取自 island.json。</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
